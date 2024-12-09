@@ -1,22 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cool T-Shirt</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Avease Widget Script -->
+    <script>
+      (function (w, d, s, o, f, js, fjs) {
+        w["Avease-Widget"] = o;
+        w[o] =
+          w[o] ||
+          function () {
+            (w[o].q = w[o].q || []).push(arguments);
+          };
+        (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+        js.id = o;
+        js.src = f;
+        js.async = 1;
+        fjs.parentNode.insertBefore(js, fjs);
+      })(
+        window,
+        document,
+        "script",
+        "av",
+        "https://widget-staging-avease.nexxtdevelopment.ca/assets/snippet.js"
+      );
+
+      av("config", {
+        id: "465efe69-c397-4502-852c-adb0fb82be91",
+      });
+      av("init");
+    </script>
+
     <div class="container">
-        <a href="index.html" class="back-button">← Back to Gallery</a>
-        <div class="item-detail">
-            <img src="item1.jpg" alt="Cool T-Shirt">
-            <h1>Cool T-Shirt</h1>
-            <p><strong>Price:</strong> $20</p>
-            <p>This T-Shirt is made of 100% cotton and comes in various sizes and colors. Perfect for casual wear!</p>
-            <button onclick="addToCart('Cool T-Shirt', 20)">Add to Cart</button>
-        </div>
+      <a href="index.html" class="back-button">← Back to Gallery</a>
+      <div class="item-detail">
+        <img src="item1.jpg" alt="Cool T-Shirt" />
+        <h1>Cool T-Shirt</h1>
+        <p><strong>Price:</strong> $20</p>
+        <p>
+          This T-Shirt is made of 100% cotton and comes in various sizes and
+          colors. Perfect for casual wear!
+        </p>
+        <button onclick="addToCart('Cool T-Shirt', 20)">Add to Cart</button>
+      </div>
+
+      <!-- Avease Try On Widget with SKU -->
+      <div
+        data-widget-id="avease-widget-loc"
+        data-product-sku="cool-t-shirt-123"
+      ></div>
     </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
