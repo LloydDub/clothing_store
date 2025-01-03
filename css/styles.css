@@ -128,3 +128,20 @@ h1 {
 .back-button:hover {
   background-color: #e0e0e0;
 }
+
+/* Avease Support Link */
+.container a[href="avease_support.html"] {
+  display: block; /* Makes the link a block-level element */
+  text-align: center; /* Centers the link text */
+  margin-top: 20px; /* Adds space above the link */
+  padding: 10px 15px; /* Adds padding around the link text */
+  background-color: #007bff; /* Sets the background color */
+  color: white; /* Sets the text color */
+  text-decoration: none; /* Removes underline from the link */
+  border-radius: 5px; /* Adds rounded corners */
+  transition: background-color 0.3s; /* Adds a smooth transition effect */
+}
+
+.container a[href="avease_support.html"]:hover {
+  background-color: #0056b3; /* Darkens the background color on hover */
+}

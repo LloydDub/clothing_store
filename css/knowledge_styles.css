@@ -1,0 +1,45 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin: 0; /* Remove default margin */
+}
+.container {
+  display: flex;
+}
+nav {
+  width: 250px;
+  background-color: #f4f4f4;
+  padding: 20px;
+  position: sticky; /* Make sidebar sticky */
+  top: 0; /* Stick to the top */
+  height: 100vh; /* Make sidebar full viewport height */
+  overflow-y: auto; /* Add vertical scrollbar if needed */
+}
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+nav a:hover {
+  background-color: #ddd;
+}
+main {
+  padding: 20px;
+  flex: 1; /* Take up remaining space */
+}
+h1,
+h2,
+h3 {
+  color: #333;
+}
+code {
+  background-color: #f4f4f4;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace;
+}

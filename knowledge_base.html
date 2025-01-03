@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Avease Vendor Guide</title>
+    <link rel="stylesheet" href="./css/knowledge_styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#platform-overview">Platform Overview</a></li>
+          <li><a href="#setup">Setup</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#avease-integration">Avease Integration</a></li>
+          <li><a href="#sizing-chart">Sizing Chart</a></li>
+        </ul>
+        <a href="./avease_support.html">
+            <button>Go Back!</button>
+          </a>
+      </nav>
+
+      <main>
+        <h1>Avease Vendor Guide</h1>
+
+        <section id="introduction">
+          <h2>Introduction</h2>
+          <p>
+            Welcome to your Avease Vendor Portal! This guide will help you
+            understand how to get the most out of the Avease platform, as well
+            as how to officially set up products and maintain your e-commerce
+            platform while utilizing its features.
+          </p>
+          <p>
+            You should have received an invitation to sign in to the Vendor
+            Portal. Here, you can add products, view analytics, send feedback to
+            the Avease team, and invite your merchandising team members for
+            collaboration.
+          </p>
+        </section>
+
+        <section id="platform-overview">
+          <h2>Platform Overview</h2>
+
+          <h3>Dashboard</h3>
+          <p>
+            Once you create your Avease account, you’ll be greeted by your
+            dashboard. The dashboard provides a high-level snapshot of your top
+            products, total transaction volume, active products, and inactive
+            products.
+          </p>
+          <p>
+            From the dashboard, you can set custom time periods to view try-on
+            analytics and track your top-performing products, including the
+            number of try-ons for each item.
+          </p>
+
+          <h3>Product Feed</h3>
+          <p>
+            The product feed is where you can view all of your garments and
+            filter them by active or inactive status. You can also use the
+            search field to locate individual products by name or SKU.
+          </p>
+          <p>
+            Using the product feed, you can add individual products to your
+            online store. Instructions on how to add products will be covered in
+            a dedicated section.
+          </p>
+
+          <h3>Send Feedback</h3>
+          <p>
+            Your feedback is important to us! That’s why we provide a dedicated
+            feedback form for our valued partners to report bugs or submit
+            feature requests. In addition to the feedback form, multiple
+            channels of communication are available to vendors to address any
+            issues or concerns quickly.
+          </p>
+        </section>
+
+        <section id="setup">
+          <h2>Setup</h2>
+          <p>
+            The Setup section is where the main functionality of the platform
+            resides. Here, you’ll find all the tools and resources needed to:
+          </p>
+          <ul>
+            <li>Add the Avease script to your website.</li>
+            <li>Format and upload your product data via CSV.</li>
+            <li>Enable sizing recommendations using sizing charts.</li>
+          </ul>
+          <p>
+            Each of these features will be explained in greater detail in the
+            following sections.
+          </p>
+        </section>
+
+        <section id="team">
+          <h2>Team</h2>
+          <p>
+            The Team section is where you can invite your merchandising or web
+            team members to collaborate on the Avease platform
+          </p>
+        </section>
+
+        <section id="avease-integration">
+          <h2>Avease Integration</h2>
+          <p>
+            This section will cover the specifications for adding Avease to your
+            online store.
+          </p>
+
+          <h3>Adding the script</h3>
+          <p>
+            Integration will require adding a script with your personal widget
+            key. The Widget key is located in the Widget integration section and
+            the provided script automatically includes your widget key for ease
+            of use.
+          </p>
+          <p>
+            The Script below is inserted in the body of the garment’s page as
+            shown in the example below
+          </p>
+          <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+ &lt;head&gt;
+   &lt;meta charset="UTF-8" /&gt;
+   &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;
+   &lt;title&gt;Cool T-Shirt&lt;/title&gt;
+   &lt;link rel="stylesheet" href="styles.css" /&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+   &lt;script&gt;
+     (function (w, d, s, o, f, js, fjs) {
+       w["Avease-Widget"] = o;
+       w[o] =
+         w[o] ||
+         function () {
+           (w[o].q = w[o].q || []).push(arguments);
+         };
+       (js = d.createElement(s)), (fjs = d.getElementsByTagName(s)[0]);
+       js.id = o;
+       js.src = f;
+       js.async = 1;
+       fjs.parentNode.insertBefore(js, fjs);
+     })(
+       window,
+       document,
+       "script",
+       "av",
+       "https://widget-staging-avease.nexxtdevelopment.ca/assets/snippet.js"
+     );
+     av("config", { id: "Your Key here" });
+     av("init");
+   &lt;/script&gt; 
+                </code></pre>
+
+          <h3>Setting up the Embedded HTML Snippet</h3>
+          <p>
+            To integrate the Avease virtual try-on experience directly into your
+            product pages, you'll need to embed a small piece of HTML code. This
+            code snippet acts as a placeholder for the Avease try-on button and
+            functionality.
+          </p>
+          <h4>Code Implementation:</h4>
+          <p>
+            Copy and paste the following code into the desired location on your
+            product page:
+          </p>
+          <pre><code>&lt;div data-widget-id="avease-widget-loc" data-product-sku={YOUR_PRODUCT_SKU}&gt;&lt;/div&gt;</code></pre>
+          <h4>Important Note:</h4>
+          <p>
+            Replace {YOUR_PRODUCT_SKU} with the actual SKU (Stock Keeping Unit)
+            of the product displayed on that specific page. This ensures that
+            the try-on experience is linked to the correct product.
+          </p>
+
+          <h3>Setup Complete</h3>
+          <h4>Verification:</h4>
+          <p>
+            After embedding the code snippet, you can verify the successful
+            integration of the Avease widget by following these steps:
+          </p>
+          <ol>
+            <li>Navigate to the product page where you embedded the code.</li>
+            <li>Locate the "Try On With Avease" button.</li>
+            <li>Click the button.</li>
+          </ol>
+          <h4>Expected Behavior:</h4>
+          <ul>
+            <li>A pop-up iframe should appear.</li>
+            <li>
+              The iframe will prompt you to sign in to your Avease account (if
+              you haven't already).
+            </li>
+          </ul>
+          <h4>Troubleshooting:</h4>
+          <h5>Button Not Appearing:</h5>
+          <p>
+            If the "Try On With Avease" button is not visible on your product
+            page, it's likely due to an issue with the product's status in your
+            Product Feed.
+          </p>
+          <p>
+            Ensure that the product you are viewing is active in the Product
+            Feed.
+          </p>
+          <h4>Additional Considerations:</h4>
+          <ul>
+            <li>
+              Product Feed: The Avease system relies on a product feed to sync
+              product information. Make sure your product feed is up-to-date and
+              that the product you're trying to view is included and marked as
+              "active."
+            </li>
+            <li>
+              Browser Compatibility: The Avease widget is designed to work with
+              modern web browsers. If you're experiencing issues, try using a
+              different browser or clearing your browser's cache and cookies.
+            </li>
+            <li>
+              JavaScript: The Avease widget relies on JavaScript to function.
+              Ensure that JavaScript is enabled in your browser settings.
+            </li>
+            <li>
+              Network Connectivity: A stable internet connection is required for
+              the Avease widget to load and function properly.
+            </li>
+          </ul>
+
+          <h3>What is the Product Feed?</h3>
+          <p>
+            The product feed is a centralized hub where you can view and manage
+            all the product data you've uploaded onto the platform. This data is
+            crucial for displaying your products correctly and enabling features
+            like fit recommendations.
+          </p>
+          <p>There are two primary ways to upload your product data:</p>
+          <ul>
+            <li>
+              Bulk Upload: If you have a large catalog, you can upload products
+              in batches using a CSV file. This is done through the "Upload
+              Product Data" section.
+            </li>
+            <li>
+              Individual Entry: For adding or editing single products, you can
+              use the "Product Feed page" to input the details manually.
+            </li>
+          </ul>
+
+          <h3>Data Retrieval and Formatting</h3>
+          <p>
+            To ensure that the platform can efficiently retrieve and display
+            your product data, and to leverage features like fit
+            recommendations, it's essential to format your data with specific
+            attributes. Think of these attributes as tags that provide key
+            details about each product.
+          </p>
+          <h4>Essential Product Attributes</h4>
+          <ul>
+            <li>
+              SKU: This is a unique code that identifies each product in your
+              inventory.
+            </li>
+            <li>
+              Title: The name of the product as it will be displayed to
+              customers.
+            </li>
+            <li>Brand: The brand associated with the product.</li>
+            <li>
+              Image Link: The URL of the image that will represent the product
+              visually.
+            </li>
+            <li>
+              Categories: The category or categories the product belongs to
+              (e.g., Clothing, Shoes, Accessories).
+            </li>
+            <li>
+              Product Group ID: This ID is used to group product variants
+              together (e.g., different sizes and colors of the same shirt).
+            </li>
+            <li>Size: The size of the product (e.g., S, M, L, XL).</li>
+            <li>Color: The color or colors of the product.</li>
+          </ul>
+          <h4>Attributes for Fit Recommendations (Required)</h4>
+          <ul>
+            <li>
+              Gender: The gender the product is designed for (e.g., M, F).
+            </li>
+            <li>
+              Sizing Category: The broad category of how the product is sized
+              (e.g., Top, Bottom, Full Body, Dress).
+            </li>
+            <li>
+              Sizing Category Type: Additional sizing details within the
+              category (e.g., Short, Long).
+            </li>
+          </ul>
+          <p>
+            <li>
+              Sizing Category: The broad category of how the product is sized
+              (e.g., Top, Bottom, Full Body, Dress).
+            </li>
+            <li>
+              Sizing Category Type: Additional sizing details within the
+              category (e.g., Short, Long).
+            </li>
+          </ul>
+          <p>
+            Note: The attributes related to gender, sizing category, and sizing
+            category type are mandatory if you want to utilize the fit
+            recommendation feature for your products.
+          </p>
+
+          <h3>FAQs</h3>
+          <h4>
+            1. Do I need to format my product data if I'm using Google Merchant
+            Center?
+          </h4>
+          <p>
+            Yes, even if you're using Google Merchant Center to manage your
+            product data, you'll still need to incorporate the Avease-specific
+            attributes mentioned above. These are essential for generating
+            accurate fit recommendations and ensuring optimal product display on
+            the Avease platform.
+          </p>
+          <h4>
+            2. I have a large number of products that don't have the required
+            formatting. Is there any easy way for me to update these?
+          </h4>
+          <p>
+            Unfortunately, there isn't a bulk update feature for reformatting
+            your product data at this time. You'll need to either:
+          </p>
+          <ul>
+            <li>
+              Manually Edit the CSV: If you initially uploaded your products via
+              CSV, you can edit the file to include the missing attributes and
+              then re-upload it.
+            </li>
+            <li>
+              Update Products Individually: Use the Product Feed page to edit
+              each product and add the required information one by one.
+            </li>
+          </ul>
+          <p>
+            While this might be a time-consuming process, ensuring your product
+            data is correctly formatted will significantly enhance the customer
+            experience and potentially increase sales through features like
+            personalized fit recommendations.
+          </p>
+        </section>
+
+        <section id="sizing-chart">
+          <h2>Sizing Chart</h2>
+          <h3>Fit Recommendation</h3>
+          <p>
+            Sizing charts enable Avease to provide fit recommendations to
+            customers. Avease has default charts available, but you can edit the
+            sizing ranges to align with your specific products for more accurate
+            results.
+          </p>
+          <p>
+            Select Male top, Female top, Female bottom, or Male bottom and
+            choose to display measurements in inches or centimeters.
+          </p>
+          <p>
+            Remember: For Avease to provide fit recommendations, ensure the Fit
+            Recommendation toggle is enabled.
+          </p>
+        </section>
+
+        <section id="team">
+          <h2>Team</h2>
+          <p>
+            The Team section allows you to invite collaborators to the Avease
+            platform. You can add additional admins by providing their First
+            Name, Last Name, email, and phone number. All fields are required.
+          </p>
+          <p>To add a new team member:</p>
+          <ol>
+            <li>Click on the Team tab in the navigation bar.</li>
+            <li>Click on the Invite New Member button.</li>
+            <li>
+              Enter the team member's First Name, Last Name, email, and phone
+              number.
+            </li>
+            <li>Click on the Send Invitation button.</li>
+          </ol>
+          <p>
+            The team member will receive an email invitation with a link to
+            create their account. Once they have created their account, they
+            will be able to access the Avease platform.
+          </p>
+          <p>Note: Only admins can invite new team members.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

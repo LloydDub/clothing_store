@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Service Request</title>
+    <link rel="stylesheet" href="service_styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Service Request</h1>
+      <p>Please select the type of request you would like to submit:</p>
+
+      <div class="request-buttons">
+        <button onclick="showRequestForm('request1')">Request Type 1</button>
+        <button onclick="showRequestForm('request2')">Request Type 2</button>
+        <button onclick="showRequestForm('request3')">Request Type 3</button>
+        <button onclick="showRequestForm('request4')">Request Type 4</button>
+      </div>
+
+      <div id="requestForms">
+        <iframe
+          id="request1"
+          style="display: none"
+          class="clickup-embed clickup-dynamic-height"
+          src="https://forms.clickup.com/9011807284/f/8cjah1m-831/EKC30DPTBQ9XWP4GMF"
+          onwheel=""
+          width="100%"
+          height="100%"
+          style="background: transparent; border: 1px solid #ccc"
+        ></iframe>
+        <iframe
+          id="request2"
+          style="display: none"
+          class="clickup-embed clickup-dynamic-height"
+          src=""
+          onwheel=""
+          width="100%"
+          height="100%"
+          style="background: transparent; border: 1px solid #ccc"
+        ></iframe>
+        <iframe
+          id="request3"
+          style="display: none"
+          class="clickup-embed clickup-dynamic-height"
+          src=""
+          onwheel=""
+          width="100%"
+          height="100%"
+          style="background: transparent; border: 1px solid #ccc"
+        ></iframe>
+        <iframe
+          id="request4"
+          style="display: none"
+          class="clickup-embed clickup-dynamic-height"
+          src=""
+          onwheel=""
+          width="100%"
+          height="100%"
+          style="background: transparent; border: 1px solid #ccc"
+        ></iframe>
+        <script
+          async
+          src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"
+        ></script>
+      </div>
+    </div>
+
+    <script src="./js/service.js"></script>
+  </body>
+</html>
