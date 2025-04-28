@@ -1,0 +1,1 @@
+This is proof of concept/learning for a project I worked on. I created a mock web-store to integrate a platform I was contracted to assist with. Essentially my duties was to be point of contact and on-board vendors to the platform.

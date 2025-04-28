@@ -67,7 +67,7 @@ h1 {
   color: #007bff;
 }
 
-/* Item Detail Page */
+Item Detail Page
 .item-detail {
   text-align: center;
   background-color: #fff;
@@ -76,10 +76,17 @@ h1 {
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 20px;
+  width: 300px;
+  height: auto;
 }
 
+#jeans {
+  width: 300px;
+  height: auto;
+
+}
 .item-detail img {
-  max-width: 300px;
+  width: 300px;
   height: auto;
   border-radius: 5px;
   margin-bottom: 20px;
